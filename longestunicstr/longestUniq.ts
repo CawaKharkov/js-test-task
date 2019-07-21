@@ -1,5 +1,5 @@
 /**
- * Create array wit only unic valuez
+ * Create array wit only uniq values
  * @param {String} stringFirst - first string
  * @param {String} stringSecond - second string
  * @return {String[]} - Array with only unique items
