@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { BehaviorSubject } from 'rxjs';
 
 import { Element } from '../element.interface';
 import { DataService } from '../services/data.service';
@@ -12,11 +12,10 @@ import { DataService } from '../services/data.service';
 export class AimComponent {
   @Input() name: string;
   public elements: BehaviorSubject<Element[]> = new BehaviorSubject([]);
- 
+
   constructor(
     private dataService: DataService
   ) {
-    // this.dataService.getElements();
     this.elements = this.dataService.elements;
   }
 }
