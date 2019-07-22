@@ -4,5 +4,9 @@ export interface Element {
   ContainsAccEnvData: boolean,
   Keywords: string,
   FullDescription: string,
-  // Etc
+  Id: string
+}
+export interface ElementsImpl {
+  Items: Element[];
+  Count: number;
 }

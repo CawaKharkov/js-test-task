@@ -22,13 +22,13 @@
 .search-location {
   border-bottom: 1px solid #dce7ef;
 
-  .fa {    
+  .fa {
     display: inline-block;
     width: 44px;
     line-height: 43px;
     text-align: center;
     font-size: 14px;
-    
+
     &-map-marker {
       background: #243443;
       color: #9199a1;
@@ -36,7 +36,7 @@
 
     &-search {
       color: #243443;
-    } 
+    }
 
     &-times {
       color: #dce7ef;
@@ -119,14 +119,14 @@
 
 .list-object-wrapper {
   overflow-x: hidden;
-  overflow-y: auto; 
+  overflow-y: auto;
   max-height: 400px;
 
   ul {padding: 0; margin: 0;}
   li {
     position: relative;
     list-style: none;
-    min-height: 44px;    
+    min-height: 44px;
     border-bottom: 1px solid #dce7ef;
     padding-left: 44px;
 
