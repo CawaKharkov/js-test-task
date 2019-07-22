@@ -16,7 +16,9 @@ export class AddressComponent implements OnInit, OnDestroy {
      */
     public search: FormControl;
 
-
+    /**
+     * Subscribtion for search uses for preventing memory leaks on init -> destroy component cycle
+     */
     private searchSubscribtion: Subscription;
 
     constructor(

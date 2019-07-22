@@ -7,16 +7,27 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 
 @Injectable()
 export class DataService {
-
+    /**
+     * row elements store
+     */
     private _elements$$: BehaviorSubject<Element[]> = new BehaviorSubject([]);
+    /**
+     * filtered data  store
+     */
     private _elementsFiltered$: Observable<Element[]>;
-
+    /**
+     * query subject. shores all query data
+     */
     public query$$: BehaviorSubject<string> = new BehaviorSubject('');
-
+    /**
+     * accessor for filtered elements
+     */
     public get elementsFiltered$() {
         return this._elementsFiltered$
     }
-
+    /**
+     * accessor for elements
+     */
     public get elements(): BehaviorSubject<Array<Element>> {
         return this._elements$$
     }
@@ -31,6 +42,9 @@ export class DataService {
         }));
     }
 
+    /**
+     * Get elements from api
+     */
     public getElements() {
         this._http.get(
             'https://apidata.mos.ru/v1/datasets?api_key=32a58ac9b521dbda0d65bede75377add&$skip=1&$top=20&$inlinecount=allpages',
