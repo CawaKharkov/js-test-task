@@ -17,6 +17,6 @@ export class AimComponent {
     private dataService: DataService
   ) {
     // this.dataService.getElements();
-    this.elements = this.dataService.elements;
+    this.elements = this.dataService.getElements();
   }
 }
